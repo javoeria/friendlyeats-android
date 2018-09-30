@@ -26,6 +26,9 @@ import com.google.firebase.example.fireeats.R;
 import com.google.firebase.example.fireeats.model.Rating;
 import com.google.firebase.firestore.Query;
 
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.zhanghai.android.materialratingbar.MaterialRatingBar;
@@ -53,8 +56,13 @@ public class RatingAdapter extends FirestoreAdapter<RatingAdapter.ViewHolder> {
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
+        SimpleDateFormat date = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
+
         @BindView(R.id.rating_item_name)
         TextView nameView;
+
+        @BindView(R.id.rating_item_date)
+        TextView dateView;
 
         @BindView(R.id.rating_item_rating)
         MaterialRatingBar ratingBar;
@@ -69,6 +77,7 @@ public class RatingAdapter extends FirestoreAdapter<RatingAdapter.ViewHolder> {
 
         public void bind(Rating rating) {
             nameView.setText(rating.getUserName());
+            dateView.setText(date.format(rating.getTimestamp()));
             ratingBar.setRating((float) rating.getRating());
             textView.setText(rating.getText());
         }
