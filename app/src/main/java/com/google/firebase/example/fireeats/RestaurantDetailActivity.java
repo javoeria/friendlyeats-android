@@ -225,6 +225,11 @@ public class RestaurantDetailActivity extends AppCompatActivity
         onBackPressed();
     }
 
+    @OnClick(R.id.restaurant_button_delete)
+    public void onTrashClicked(View view) {
+        mRestaurantRef.delete();
+    }
+
     @OnClick(R.id.fab_show_rating_dialog)
     public void onAddRatingClicked(View view) {
         mRatingDialog.show(getSupportFragmentManager(), RatingDialogFragment.TAG);

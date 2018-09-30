@@ -36,6 +36,17 @@
             android:layout_marginTop="16dp"
             app:srcCompat="@drawable/ic_close_white_24px" />
 
+        <!-- Delete button -->
+        <ImageView
+            android:id="@+id/restaurant_button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/restaurant_button_back"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_delete_white_24dp" />
+
         <TextView
             android:id="@+id/restaurant_name"
             style="@style/AppTheme.Title"
