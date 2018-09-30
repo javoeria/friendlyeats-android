@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements
         // Get a reference to the restaurants collection
         CollectionReference restaurants = mFirestore.collection("restaurants");
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             // Get a random Restaurant POJO
             Restaurant restaurant = RestaurantUtil.getRandom(this);
 
