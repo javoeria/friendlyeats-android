@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackground"
-            android:layout_alignLeft="@+id/restaurant_name"
+            android:layout_alignStart="@+id/restaurant_name"
             android:layout_marginTop="16dp"
             app:srcCompat="@drawable/ic_close_white_24px" />
 
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/restaurant_rating"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_above="@+id/restaurant_category"
-            android:layout_alignLeft="@+id/restaurant_name"
+            android:layout_alignStart="@+id/restaurant_name"
             app:mrb_progressTint="@android:color/white"
             app:mrb_secondaryProgressTint="@android:color/white" />
 
@@ -65,8 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/restaurant_rating"
             android:layout_alignTop="@+id/restaurant_rating"
-            android:layout_marginLeft="4dp"
-            android:layout_toRightOf="@+id/restaurant_rating"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/restaurant_rating"
             android:gravity="center"
             android:textColor="@android:color/white"
             tools:text="(10)" />
@@ -77,7 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/restaurant_image"
-            android:layout_alignLeft="@+id/restaurant_name"
+            android:layout_alignStart="@+id/restaurant_name"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:textColor="@android:color/white"
@@ -87,7 +87,7 @@
             android:id="@+id/restaurant_city_divider"
             style="@style/AppTheme.TextDivider"
             android:layout_alignTop="@+id/restaurant_category"
-            android:layout_toRightOf="@+id/restaurant_category"
+            android:layout_toEndOf="@+id/restaurant_category"
             android:text="@string/divider_bullet"
             android:textColor="@android:color/white" />
 
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/restaurant_category"
             android:layout_below="@+id/restaurant_category"
-            android:layout_toRightOf="@+id/restaurant_city_divider"
+            android:layout_toEndOf="@+id/restaurant_city_divider"
             android:textColor="@android:color/white"
             tools:text="San Francisco" />
 
@@ -107,9 +107,9 @@
             style="@style/AppTheme.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/restaurant_name"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
@@ -122,9 +122,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/restaurant_top_card"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginBottom="-28dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         app:srcCompat="@drawable/ic_add_white_24px" />
 
     <!-- Ratings -->
