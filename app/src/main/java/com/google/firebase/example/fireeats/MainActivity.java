@@ -182,6 +182,7 @@ public class MainActivity extends AppCompatActivity implements
             // Add a new document to the restaurants collection
             restaurants.add(restaurant);
         }
+        Toast.makeText(this, "Random items added", Toast.LENGTH_SHORT).show();
     }
 
     @Override

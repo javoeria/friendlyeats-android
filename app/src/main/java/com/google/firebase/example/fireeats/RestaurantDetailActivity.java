@@ -28,6 +28,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -227,7 +228,27 @@ public class RestaurantDetailActivity extends AppCompatActivity
 
     @OnClick(R.id.restaurant_button_delete)
     public void onTrashClicked(View view) {
-        mRestaurantRef.delete();
+        mRatingAdapter.stopListening();
+        if (mRestaurantRegistration != null) {
+            mRestaurantRegistration.remove();
+            mRestaurantRegistration = null;
+        }
+
+        mRestaurantRef.delete()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully deleted!");
+                        Toast.makeText(RestaurantDetailActivity.this, "Document deleted", Toast.LENGTH_SHORT).show();
+                        onBackPressed();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error deleting document", e);
+                    }
+                });
     }
 
     @OnClick(R.id.fab_show_rating_dialog)

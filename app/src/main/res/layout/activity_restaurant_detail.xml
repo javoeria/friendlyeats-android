@@ -34,7 +34,7 @@
             android:background="?attr/selectableItemBackground"
             android:layout_alignStart="@+id/restaurant_name"
             android:layout_marginTop="16dp"
-            app:srcCompat="@drawable/ic_close_white_24px" />
+            app:srcCompat="@drawable/ic_arrow_back_white_24px" />
 
         <!-- Delete button -->
         <ImageView
