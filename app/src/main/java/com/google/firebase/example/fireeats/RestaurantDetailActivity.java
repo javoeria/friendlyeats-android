@@ -234,6 +234,7 @@ public class RestaurantDetailActivity extends AppCompatActivity
             mRestaurantRegistration = null;
         }
 
+        // TODO: delete ratings collection
         mRestaurantRef.delete()
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
