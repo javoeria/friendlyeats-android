@@ -15,8 +15,9 @@
  */
 package com.google.firebase.example.fireeats.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -73,7 +74,7 @@ public abstract class FirestoreAdapter<VH extends RecyclerView.ViewHolder>
         // Stop listening
         stopListening();
 
-        // Clear existinkodig data
+        // Clear existing data
         mSnapshots.clear();
         notifyDataSetChanged();
 
